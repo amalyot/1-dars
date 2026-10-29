@@ -22,12 +22,14 @@
 */
 
 *{
-	margin: 0;
+	margin: 0 ;
 	padding: 0;
 	box-sizing: border-box;
 	font-family: var(--Quicksand);
 }
-
+html {
+	scroll-behavior: smooth;
+}
 body {
 	line-height: 1.4;
 	color: var(--dark);
@@ -39,9 +41,9 @@ img {
 }
 
 .conteiner {
-	max-width: 1920px;
-	margin: 0;
-	padding: 0 18px;
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 1.2rem;
 }
 
 /* Header styling strat */
@@ -176,4 +178,218 @@ header {
 	padding-top: 1.4rem;
 }
 
+.design-content {
+	margin: 2rem 0;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+}
 
+.design-item {
+	cursor: pointer;
+	margin: 0 auto;
+}
+
+.design-img {
+	position: relative;
+	overflow: hidden;
+}
+
+.design-img::after {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.3);
+}
+
+.design-img img {
+	transition: all 0.5s ease;
+	
+}
+
+.design-img:hover img{
+	transform: scale(1.2);
+}
+
+.design-img-span-one {
+	position: absolute;
+	content: "";
+	
+	background-color: var(--dark);
+	top: 0.25rem;
+	left: 1rem;
+	color: #ffff;
+}
+.design-img-span-two {
+	position: absolute;
+	content: "";
+	font-family: var(--Quicksand);
+	font-weight: bold;
+	font-size: 18px;
+	bottom: 0.25rem;
+	right: 0.8rem;
+	z-index: 1;
+	color: #fff;
+}
+
+.design-title a{
+	display: block;
+	padding: 1rem;
+	text-decoration: none;
+	font-family: var(--Quicksand);
+	font-size: 1.5rem;
+	color: var(--exDark);
+	text-align: center;
+	width: 90%;
+	margin: 0 auto;
+}
+
+/* Blog style */
+
+.blog {
+	background: #f9f9f9;
+	padding: 4.5rem 0;
+}
+.blog-content {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr); 
+	gap: 2rem;
+	margin: 2rem;	
+}
+
+.blog-item {
+	position: relative;
+}
+.blog-img i {
+	position: absolute;
+	content: "";
+	bottom: 18.9rem;
+	right: 22px;
+	background: none;
+	color: crimson;
+	font-size: 1.8rem;
+	
+}
+.blog-text {
+	margin: 2.2rem 0;
+	padding: 0;
+
+}
+
+.blog-text span{
+	font-weight: 300;
+	display: block;
+	padding: 0.5px;
+}
+.blog-text h2 {
+	font-size: 1.65rem;
+	font-family: var(--Playfair);
+	padding: 1rem 0;
+	font-weight: 500;
+}
+.blog-text p {
+	font-size: 1.1rem;
+	font-weight: 300;
+	opacity: 0.9;
+	padding-bottom: 1.2rem;
+}
+.blog-text a {
+	font-size: 1.3rem;
+	font-family: var(--Roboto);
+	text-decoration: none;
+	color: #ffff;
+	background: var(--exDark);
+	padding: 0.4rem 1.2rem;
+	
+}
+
+.contener-about {
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	padding: 0 5rem;
+	padding-bottom: 5rem;
+	
+}
+.about-text {
+	padding: 5rem;
+}
+.about-text {
+	max-width: 760px;
+	margin: 0 auto;
+}
+
+.about-text h2 {
+	text-align: center;
+	font-family: var(--Playfair);
+	font-size: 48px;
+	font-weight: 700;
+	letter-spacing: -1px;
+	padding-bottom: 0.5rem;
+	color: #333;
+}
+
+.about-text h3 {
+	text-align: center;
+	font-family: inherit; /* matn bilan bir xil shrift */
+	font-weight: 400;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	color: #666;
+	padding-bottom: 1.5rem;
+}
+
+.about-text p {
+	text-align: left;
+	font-size: 1.1rem;
+	padding: 0.4rem 0;
+	color: #666;
+}
+
+footer{
+  background: var(--dark);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0;
+}
+.social-links{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.4rem;
+}
+.social-links a{
+  border: 2px solid #fff;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin: 0 .3rem;
+  transition: all .5s ease;
+}
+.social-links a:hover{
+  background: #fff;
+  color: var(--dark);
+}
+footer span{
+  margin-top: 1rem;
+  display: block;
+  font-family: var(--Playfair);
+  letter-spacing: 2px;
+}
+
+@media (max-width: 900px) {
+	.blog-content { grid-template-columns: repeat(2, 1fr); }
+	.contener-about { grid-template-columns: 1fr; }
+	.about-text h2 { font-size: 36px; }
+}
+
+@media (max-width: 600px) {
+	.blog-content,
+	.design-content { grid-template-columns: 1fr; }
+}
