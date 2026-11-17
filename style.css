@@ -7,7 +7,8 @@
 	--dark: #3C393d;
 	--exDark: #2b2b2b;
 } 
-/* :root — umumiy CSS o‘zgaruvchilarini belgilash uchun ishlatiladi */
+/* :root — 
+ CSS o‘zgaruvchilarini belgilash uchun ishlatiladi */
 
 /*
   CSS o‘lchov birliklari (html shrifti 16px bo‘lganda):
@@ -28,7 +29,7 @@
 	font-family: var(--Quicksand);
 }
 html {
-	scroll-behavior: smooth;
+	/* scroll-behavior: smooth; */
 }
 body {
 	line-height: 1.4;
@@ -41,7 +42,7 @@ img {
 }
 
 .conteiner {
-	max-width: 1100px;
+	max-width: 1920px;
 	margin: 0 auto;
 	padding: 0 1.2rem;
 }
@@ -382,14 +383,62 @@ footer span{
   font-family: var(--Playfair);
   letter-spacing: 2px;
 }
-
-@media (max-width: 900px) {
-	.blog-content { grid-template-columns: repeat(2, 1fr); }
-	.contener-about { grid-template-columns: 1fr; }
-	.about-text h2 { font-size: 36px; }
+.navbar-nav i {
+	display: none;
+}
+@media only screen and (max-width:800px) {
+.navbar-nav i {
+	display: block;
+	color: #fff;
+}
+.navbar-nav a {
+	display: none;
+}
+.banner {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    margin-top: 9%;
+  margin-top: 14rem;
+  }
+  .banner-title {
+    font-size: 54px;
+  }
+  .banner-title p {
+    font-size: 1rem;
+  }
+  .design-content {
+  margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+  .blog-content {
+  display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    margin: 2rem;
+  }
+  .contener-about {
+  display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 5rem;
+    padding-bottom: 5rem;
+  }
 }
 
-@media (max-width: 600px) {
-	.blog-content,
-	.design-content { grid-template-columns: 1fr; }
+
+/* @media  */
+/* Agar ekran max-width: 800px dan kichik bolganda quyidagi operatsiyalar ishlasin
+ */
+
+
+
+/* 
+
+selector {
+	proprtsy: value;
 }
+
+*/
