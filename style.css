@@ -10,17 +10,6 @@
 /* :root — 
  CSS o‘zgaruvchilarini belgilash uchun ishlatiladi */
 
-/*
-  CSS o‘lchov birliklari (html shrifti 16px bo‘lganda):
-  1px  = 1px
-  1rem = 16px; 2rem = 32px
-  1em  = 16px, agar ota element shrift o‘lchami 16px bo‘lsa
-  50%  = ota element o‘lchamining yarmi (ota element 200px bo‘lsa = 100px)
-  1vw  = ekran kengligining 1 foizi (1440px kenglikda = 14.4px)
-  1vh  = ekran balandligining 1 foizi (900px balandlikda = 9px)
-  vmin = ekran kengligi/balandligidan kichigining 1 foizi
-  vmax = ekran kengligi/balandligidan kattasining 1 foizi
-*/
 
 *{
 	margin: 0 ;
@@ -29,7 +18,7 @@
 	font-family: var(--Quicksand);
 }
 html {
-	/* scroll-behavior: smooth; */
+	scroll-behavior: smooth;
 }
 body {
 	line-height: 1.4;
