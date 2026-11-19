@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+	--Roboto: "Roboto", sans-serif;
+	--Quicksand: "Quicksand", sans-serif;
+	--Playfair: "Playfair", serif;
+	--dark: #3C393d;
+	--exDark: #2b2b2b;
+} 
+/* :root — 
+ CSS o‘zgaruvchilarini belgilash uchun ishlatiladi */
+
+/*
+  CSS o‘lchov birliklari (html shrifti 16px bo‘lganda):
+  1px  = 1px
+  1rem = 16px; 2rem = 32px
+  1em  = 16px, agar ota element shrift o‘lchami 16px bo‘lsa
+  50%  = ota element o‘lchamining yarmi (ota element 200px bo‘lsa = 100px)
+  1vw  = ekran kengligining 1 foizi (1440px kenglikda = 14.4px)
+  1vh  = ekran balandligining 1 foizi (900px balandlikda = 9px)
+  vmin = ekran kengligi/balandligidan kichigining 1 foizi
+  vmax = ekran kengligi/balandligidan kattasining 1 foizi
+*/
+
+*{
+	margin: 0 ;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: var(--Quicksand);
+}
+html {
+	/* scroll-behavior: smooth; */
+}
+body {
+	line-height: 1.4;
+	color: var(--dark);
+}
+
+img {
+	width: 100%;
+	display: block;
+}
+
+.conteiner {
+	max-width: 1920px;
+	margin: 0 auto;
+	padding: 0 1.2rem;
+}
+
+/* Header styling strat */
+
+header {
+	height: 100vh;
+	background:
+	linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)),
+	url(./img/banner-bg.jpg) center / cover no-repeat fixed;
+}
+
+.navbar {
+	background: rgba(0, 0, 0, 0.6);
+	padding: 1.2rem;
+}
+.navigation {
+	display: flex;
+	justify-content: space-between;
+}
+
+.navigation .logo a{
+	color: white;
+	font-size: 2rem;
+	display: block;
+	text-align: center;
+	font-family: var(--Playfair);
+	text-decoration: none;
+	letter-spacing: 1.4;
+}
+.navbar-nav {
+	padding: 0.8rem 0 0.2rem 0;
+}
+.navbar-nav a{
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #fff;
+	font-family: var(--Roboto);
+	font-weight: 500;
+	letter-spacing: 3px;
+	padding-right: 1.2rem;
+	padding-left: 1.2rem;
+	display: inline-block;
+	text-align: center;
+	text-wrap: unset;
+	transform: opacity 0.5s ease;
+
+}
+.navbar-nav a:hover {
+	opacity: 0.7;
+}
